@@ -1,0 +1,17 @@
+---
+
+ - hosts: node1
+   become: true
+   tasks:
+     - name: Install Git
+       apt: name={{item}} state=latest
+       with_items :
+         - git 
+     - name: Add the vagrant to the docker group
+       shell: >
+          usermod -aG docker vagrant
+   roles:
+    - stackroute.consul
+    - stackroute.docker-engine
+    - stackroute.docker-compose
+    - geerlingguy.nodejs
