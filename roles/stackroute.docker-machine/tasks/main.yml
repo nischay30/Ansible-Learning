@@ -5,4 +5,6 @@
      url:  https://github.com/docker/machine/releases/download/v0.8.2/docker-machine-Linux-x86_64
      dest: /usr/local/bin/docker-machine
      force: yes
+     owner: root
+     group: root
      mode: 0755
