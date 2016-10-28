@@ -1,12 +1,12 @@
 ---
 # tasks file for docker
-- name: Purge older docker repositories
-  apt:
-    name: "{{item}}"
-    state: absent
-  with_items:
-    - lxc-docker
-    - docker.io
+# - name: Purge older docker repositories
+#   apt:
+#     name: "{{item}}"
+#     state: absent
+#   with_items:
+#     - lxc-docker
+#     - docker.io
 - name: Install https support packages for apt
   apt:
     name: "{{item}}"
