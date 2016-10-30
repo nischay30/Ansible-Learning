@@ -1,0 +1,22 @@
+---
+# tasks file for stackroute.docker-experimental
+- name: Purge old docker Repositories
+  apt:
+    name: "{{item}}"
+    state: absent
+    purge: yes
+    autoremove: yes
+  with_items:
+    - lxc-docker
+    - docker-engine
+    - docker.io
+
+- name: Install experimental docker
+  copy: 
+    src: ../files/docker
+    dest: /usr/local/bin 
+    mode: 0755 
+    group: root 
+    owner: root 
+    force: yes
+
