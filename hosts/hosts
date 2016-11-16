@@ -5,9 +5,8 @@ node4 ansible_host=192.168.3.5 swarm_iface=enp0s8 ansible_user=vagrant node_name
 node5 ansible_host=192.168.3.6 swarm_iface=enp0s8 ansible_user=vagrant node_name=node5
 node6 ansible_host=192.168.3.7 swarm_iface=enp0s8 ansible_user=vagrant node_name=node6
 
-[docker-consul-workers]
-node1
-node2
+
+[consul-workers]
 node3
 node4
 node5
@@ -22,4 +21,13 @@ node2
 node3
 
 [consul-server]
+node1
+node2
+node6
+
+[cluster]
+node2
+node3
+node4
+node5
 node6

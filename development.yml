@@ -16,13 +16,24 @@
     - stackroute.docker-compose
     - geerlingguy.nodejs
 
- - hosts: localhost
-   become: true
-   roles:
-    - stackroute.docker-compose
-
-
  - hosts: node2
+   become: true
+   tasks: 
+     - name: make package json
+       shell: >
+          npm install -y
+
+     - name: install redis
+       shell: >
+          npm install redis --save-dev     
+
+
+   # roles:
+   #  - theNewFlesh.sublime-config
+    # - stackroute.docker-compose
+
+
+ - hosts: nod
    become: true
    roles:
     - geerlingguy.nodejs
