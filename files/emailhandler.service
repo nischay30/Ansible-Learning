@@ -2,7 +2,7 @@
 Description=Consul Email Notifier Service
 
 [Service]
-ExecStart= ~/emailNotifier.sh ; echo Done
+ExecStart= /home/vagrant/emailNotifier.sh ; echo Done
 
 [Install]
 WantedBy=multi-user.target

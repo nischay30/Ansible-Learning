@@ -1,7 +1,4 @@
 ---
-
-
-
  - hosts: nodew
    become: true
    tasks:
@@ -32,13 +29,13 @@
     - stackroute.docker-experimental  
     # - {role: theNewFlesh.sublime, sublime_build: 3126}
 
-
- - hosts: noe
+ - hosts: node2
+   become: true
    tasks: 
-     - name: Copy the Email notifier Serivce File
-       copy: src=files/emailhandler.service dest=/home force=yes mode=0755
+     - name: make package json
+       shell: >
+          npm install -y
 
- - hosts: node1
-   roles:
-    - appfabricConfiguration
-
+     - name: install redis
+       shell: >
+          npm install redis --save-dev     

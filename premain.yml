@@ -29,6 +29,7 @@
      - name: add the user to docker group
        shell: >
          usermod -aG docker {{ansible_user}}
+
      - name: Add the Flags to access Local docker registery
        copy: src=files/daemon.json dest=/etc/docker/ force=yes mode=0755
 
@@ -59,7 +60,6 @@
    roles:     
      - stackroute.consul
      # - emailhandler    
-     - stackroute.consul-Server
 
  - hosts: cluster
    become: true

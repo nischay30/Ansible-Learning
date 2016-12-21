@@ -3,7 +3,11 @@
 - name: Copy email Handler Configuration
   template: 
     src: emailhandler.sh 
+<<<<<<< HEAD
     dest: ~/
+=======
+    dest: /home/vagrant
+>>>>>>> c41939a8653c0f63c7a18559903d17a5feaafc93
     owner: root
     group: root
     force: yes
@@ -12,7 +16,11 @@
 - name: Copy Redis Server Publish File
   copy: 
     src: ../files/app.js
+<<<<<<< HEAD
     dest: ~/ 
+=======
+    dest: /home/vagrant 
+>>>>>>> c41939a8653c0f63c7a18559903d17a5feaafc93
     mode: 0755
     owner: root
     group: root

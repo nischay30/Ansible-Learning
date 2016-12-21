@@ -5,11 +5,14 @@ node4 ansible_host=192.168.3.5 swarm_iface=enp0s8 ansible_user=vagrant node_name
 node5 ansible_host=192.168.3.6 swarm_iface=enp0s8 ansible_user=vagrant node_name=node5
 node6 ansible_host=192.168.3.7 swarm_iface=enp0s8 ansible_user=vagrant node_name=node6
 
+<<<<<<< HEAD
 node7 ansible_host=172.23.238.221 ansible_user=arzoogupta ansible_sudo_pass=dad12345
 
 node8 ansible_host=172.23.238.198 ansible_user=abhilasha ansible_sudo_pass=Abhi@kush9
 
 node9 ansible_host=172.23.238.220 ansible_user=clintjose08 ansible_sudo_pass=Kichu.a9
+=======
+>>>>>>> c41939a8653c0f63c7a18559903d17a5feaafc93
 
 [consul-workers]
 node3
@@ -26,13 +29,25 @@ node3
 node4
 
 [consul-server]
+<<<<<<< HEAD
 node6
 node1
 node2
 
 [cluster]
 node1
+=======
+node1
+node2
+node6
+
+[cluster]
+>>>>>>> c41939a8653c0f63c7a18559903d17a5feaafc93
 node2
 node3
 node4
 node5
+<<<<<<< HEAD
+=======
+node6
+>>>>>>> c41939a8653c0f63c7a18559903d17a5feaafc93

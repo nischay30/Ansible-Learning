@@ -23,7 +23,11 @@ sed -i 's/3/Left/g' nodes2.txt
 paste nodes1.txt nodes2.txt >> nodes3.txt
 
 cat nodes3.txt
+<<<<<<< HEAD
 node ~/app.js &
+=======
+node /home/vagrant/app.js &
+>>>>>>> c41939a8653c0f63c7a18559903d17a5feaafc93
 mail -s "Nodes Health" {{ email_recipients }}  < nodes3.txt
 
 echo "hello-there: ${SERF_EVENT}. Data follows..."

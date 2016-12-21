@@ -1,3 +1,4 @@
+---
 # determine the status of each manager node and break them
 # into two groups:
 #   - swarm_manager_operational (swarm is running and active)
