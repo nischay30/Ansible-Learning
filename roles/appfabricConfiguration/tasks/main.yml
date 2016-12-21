@@ -1,9 +1,17 @@
 ---
 - name: Copy Configuration file for appfabric
-  template: 
-    src: configuration.j2 
-    dest: /home/vagrant 
-    owner: root 
-    group: root 
-    force: yes 
-    mode: 0644
+  unarchive: 
+    src: ../files/dist.zip 
+    dest: /home/vagrant
+    creates: no
+    owner: vagrant 
+    group: vagrant 
+    mode: 0755
+
+- command: npm install
+  args:
+    chdir: dist
+
+- command: npm start
+  args:
+    chdir: dist    

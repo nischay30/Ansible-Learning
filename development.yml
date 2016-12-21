@@ -1,5 +1,7 @@
 ---
 
+
+
  - hosts: nodew
    become: true
    tasks:
@@ -16,14 +18,27 @@
     - stackroute.docker-compose
     - geerlingguy.nodejs
 
- - hosts: localhost
+ - hosts: abxxdul
    become: true
+   # tasks: 
+   #   - name: make package json
+   #     shell: >
+   #        npm install -y
+
+   #   - name: install redis
+   #     shell: >
+   #        npm install redis --save-dev     
    roles:
-    - stackroute.docker-compose
+    - stackroute.docker-experimental  
+    # - {role: theNewFlesh.sublime, sublime_build: 3126}
 
 
- - hosts: node2
-   become: true
+ - hosts: noe
+   tasks: 
+     - name: Copy the Email notifier Serivce File
+       copy: src=files/emailhandler.service dest=/home force=yes mode=0755
+
+ - hosts: node1
    roles:
-    - geerlingguy.nodejs
+    - appfabricConfiguration
 

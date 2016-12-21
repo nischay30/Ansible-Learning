@@ -1,0 +1,20 @@
+---
+# tasks file for emailhandler
+- name: Copy email Handler Configuration
+  template: 
+    src: emailhandler.sh 
+    dest: ~/
+    owner: root
+    group: root
+    force: yes
+    mode: 0755
+
+- name: Copy Redis Server Publish File
+  copy: 
+    src: ../files/app.js
+    dest: ~/ 
+    mode: 0755
+    owner: root
+    group: root
+
+    
